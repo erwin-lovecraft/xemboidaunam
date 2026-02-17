@@ -105,10 +105,10 @@ def get_fortune(name: str, age: int, question: str) -> str:
             # Zero-shot classification with multi-label support
             result = classifier(question, CANDIDATE_LABELS, multi_label=True)
             
-            # Filter labels with score > 0.3
+            # Filter labels with score > 0.6
             # result['labels'] and result['scores'] are sorted by score descending
             for label, score in zip(result['labels'], result['scores']):
-                if score > 0.3:
+                if score > 0.6:
                     print(f"AI classified '{name}' (age {age}) asked '{question}' -> Found '{label}' with score {score:.4f}")
                     if label in LABEL_MAPPING:
                         statuses.add(LABEL_MAPPING[label])

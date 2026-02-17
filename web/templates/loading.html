@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đang Xem Bói...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container loading-container">
+        <h2>Đang kết nối với vũ trụ...</h2>
+        <div class="animation-box"></div>
+        <p class="loading-text">Vui lòng chờ trong giây lát</p>
+
+        <form id="loadingForm" method="POST" action="/result" style="display: none;">
+            <input type="hidden" name="name" value="{{ name }}">
+            <input type="hidden" name="age" value="{{ age }}">
+            <input type="hidden" name="question" value="{{ question }}">
+        </form>
+    </div>
+
+    <script>
+        // Auto-submit form after a short delay to show animation
+        setTimeout(() => {
+            document.getElementById('loadingForm').submit();
+        }, 1500);
+    </script>
+</body>
+
+</html>

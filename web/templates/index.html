@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xem Bói Đầu Năm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Xem Bói Đầu Năm</h1>
+        <p class="subtitle">Hãy để vận mệnh chỉ dẫn con đường của bạn</p>
+        <img src="https://freeimage.host/i/qdgJqDF" alt="Banner"
+            style="width: 100%; height: auto; border-radius: 0px; border: 0cap;">
+
+        <form method="POST" action="/predict" class="fortune-form">
+            <div class="form-group">
+                <input type="text" id="name" name="name" required placeholder="Nhập tên...">
+            </div>
+
+            <div class="form-group">
+                <input type="number" id="age" name="age" required min="1" max="120" placeholder="Nhập tuổi...">
+            </div>
+
+            <div class="form-group">
+                <textarea id="question" name="question" required rows="4"
+                    placeholder="Bạn muốn hỏi điều gì?"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Xem Bói Ngay</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết Quả Xem Bói</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container result-container">
+        <h1>🌟 Lời Nhắn Từ Vũ Trụ</h1>
+
+        <div class="user-info">
+            <p><strong>Tên:</strong> {{ name }}</p>
+            <p><strong>Tuổi:</strong> {{ age }}</p>
+            <p><strong>Câu hỏi:</strong> {{ question }}</p>
+        </div>
+
+        <div class="fortune-result">
+            <h3>Lời Giải Đáp:</h3>
+            <p class="result-text">{{ fortune }}</p>
+        </div>
+
+        <a href="/" class="retry-btn">Xem Bói Lại</a>
+    </div>
+</body>
+
+</html>

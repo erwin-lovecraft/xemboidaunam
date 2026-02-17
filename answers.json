@@ -1,0 +1,52 @@
+[
+  {
+    "status": "S0",
+    "topic": "Sự nghiệp",
+    "answers": [
+      "Năm nay công việc của bạn sẽ có nhiều khởi sắc. Hãy mạnh dạn nắm bắt cơ hội mới.",
+      "Bạn sẽ gặp được quý nhân phù trợ trong công việc. Mọi khó khăn đều sẽ qua đi.",
+      "Đây là thời điểm tốt để học hỏi thêm kỹ năng mới. Sự đầu tư cho bản thân sẽ mang lại quả ngọt.",
+      "Hãy cẩn trọng trong các quyết định đầu tư lớn. Kiên nhẫn sẽ mang lại thành công bền vững."
+    ]
+  },
+  {
+    "status": "S1",
+    "topic": "Tình duyên",
+    "answers": [
+      "Đường tình duyên năm nay rực rỡ. Nếu còn độc thân, bạn có thể sẽ gặp được ý trung nhân.",
+      "Mối quan hệ hiện tại cần sự vun đắp và thấu hiểu hơn từ cả hai phía.",
+      "Hãy mở lòng mình ra, tình yêu đích thực đang ở rất gần bạn.",
+      "Năm nay tình cảm gia đạo êm ấm, hạnh phúc viên mãn."
+    ]
+  },
+  {
+    "status": "S2",
+    "topic": "Sức khỏe",
+    "answers": [
+      "Sức khỏe năm nay ổn định, nhưng cần chú ý ăn uống và nghỉ ngơi điều độ.",
+      "Hãy dành thời gian tập thể dục thường xuyên để duy trì năng lượng tích cực.",
+      "Đề phòng các bệnh vặt khi giao mùa. Tăng cường sức đề kháng là điều cần thiết.",
+      "Tinh thần thoải mái là liều thuốc tốt nhất cho sức khỏe của bạn năm nay."
+    ]
+  },
+  {
+    "status": "S3",
+    "topic": "Tài lộc",
+    "answers": [
+      "Tài lộc năm nay vượng phát. Tiền bạc rủng rỉnh.",
+      "Có cơ hội tăng thu nhập từ nghề tay trái hoặc các khoản đầu tư nhỏ.",
+      "Cần quản lý chi tiêu hợp lý để tránh thất thoát không đáng có.",
+      "Thần tài đang gõ cửa nhà bạn. Hãy chuẩn bị đón nhận tin vui về tài chính."
+    ]
+  },
+  {
+    "status": "S4",
+    "topic": "Tổng quát",
+    "answers": [
+      "Năm nay là một năm bình an và may mắn với bạn.",
+      "Mọi sự cố gắng của bạn sẽ được đền đáp xứng đáng.",
+      "Hãy giữ vững niềm tin và lạc quan, mọi điều tốt đẹp sẽ đến.",
+      "Chúc bạn một năm mới vạn sự như ý, tỷ sự như mơ."
+    ]
+  }
+]

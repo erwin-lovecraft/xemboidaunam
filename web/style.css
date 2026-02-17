@@ -131,7 +131,7 @@ textarea {
 .animation-box {
   width: 200px;
   height: 200px;
-  background-image: url('https://freeimage.host/i/animations.qdgJJKx');
+  background-image: url('/static/assets/animations.svg');
   background-size: 400px 400px;
   margin: 0 auto 30px;
   animation: play-sprite 0.8s steps(1) infinite;

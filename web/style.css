@@ -129,35 +129,28 @@ textarea {
 }
 
 .animation-box {
-  width: 200px;
-  height: 200px;
+  width: 256px;
+  height: 256px;
   background-image: url('/static/assets/animations.svg');
-  background-size: 400px 400px;
+  background-size: 512px;
   margin: 0 auto 30px;
   animation: play-sprite 0.8s steps(1) infinite;
   border-radius: 10px;
 }
 
 @keyframes play-sprite {
-  /* 0% {
+  0% {
     background-position: 0px 0px;
-  } */
+  }
 
   25% {
-    background-position: -200px 0px;
+    background-position: -256px 0px;
   }
 
   50% {
-    background-position: 0px -200px;
+    background-position: 0px -260px;
+    scale: 1.2;
   }
-
-  /* 75% {
-    background-position: -200px -200px;
-  }
-
-  100% {
-    background-position: 0px 0px;
-  } */
 }
 
 .loading-text {

@@ -43,10 +43,19 @@
     "status": "S4",
     "topic": "Tổng quát",
     "answers": [
-      "Năm nay là một năm bình an và may mắn với bạn.",
-      "Mọi sự cố gắng của bạn sẽ được đền đáp xứng đáng.",
-      "Hãy giữ vững niềm tin và lạc quan, mọi điều tốt đẹp sẽ đến.",
-      "Chúc bạn một năm mới vạn sự như ý, tỷ sự như mơ."
+      "Hỏi đàng hoàng đi, hỏi câu bân quơ ai mà trả lời được",
+      "Xem được thì xem, không xem được thì thôi",
+      "Hỏi câu khó trả lời quá, hỏi câu khác đi"
+    ]
+  },
+  {
+    "status": "S5",
+    "topic": "Pizza",
+    "answers": [
+      "Năm nay con sẽ được ăn Pizza nhiều hơn năm ngoái",
+      "Năm nay ăn Pizza company hay Pizza Hut, tránh ăn Domino sẽ bị nghiệp",
+      "Gia chủ chỉ cần ăn thêm 77 49 cái Pizza nữa là sẽ được giải nghiệp",
+      "Thí chủ bị nghiệp Pizza, cần lựa ngày lành tháng tốt đặt Pizza về ăn để giải nghiệp"
     ]
   }
 ]

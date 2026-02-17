@@ -61,11 +61,12 @@ LABEL_MAPPING = {
     "Tài lộc": "S3",
     "Tiền bạc": "S3",
     "Tổng quát": "S4",
-    "Khác": "S4"
+    "Khác": "S4",
+    "Pizza": "S5",
 }
 
 # Candidate labels for the model
-CANDIDATE_LABELS = ["Sự nghiệp", "Tình duyên", "Sức khỏe", "Tài lộc", "Tổng quát"]
+CANDIDATE_LABELS = ["Sự nghiệp", "Tình duyên", "Sức khỏe", "Tài lộc", "Khác", "Pizza"]
 # Webhook URL
 WEBHOOK_URL = os.environ.get("WEBHOOK_URL")
 
@@ -105,10 +106,10 @@ def get_fortune(name: str, age: int, question: str) -> str:
             # Zero-shot classification with multi-label support
             result = classifier(question, CANDIDATE_LABELS, multi_label=True)
             
-            # Filter labels with score > 0.6
+            # Filter labels with score > 0.9
             # result['labels'] and result['scores'] are sorted by score descending
             for label, score in zip(result['labels'], result['scores']):
-                if score > 0.6:
+                if score >= 0.9:
                     print(f"AI classified '{name}' (age {age}) asked '{question}' -> Found '{label}' with score {score:.4f}")
                     if label in LABEL_MAPPING:
                         statuses.add(LABEL_MAPPING[label])
@@ -120,6 +121,7 @@ def get_fortune(name: str, age: int, question: str) -> str:
     # Fallback if no specific topics found
     if not statuses:
         statuses.add("S4") # General
+        print(f"Hỏi câu không đúng chủ đề")
         topic_labels.append("Tổng quát")
     
     # 3. Select answers based on statuses
@@ -150,7 +152,7 @@ async def index(request: Request):
 
 
 @app.post("/predict")
-@limiter.limit("5/hour")
+@limiter.limit("10/hour")
 async def predict(
     request: Request,
     name: str = Form(...),
@@ -160,6 +162,12 @@ async def predict(
     """Handle form submission and redirect to loading page"""
     # Validate inputs
     if not name or not question:
+        return RedirectResponse(url="/", status_code=303)
+        
+    name = name.strip()
+    question = question.strip()
+
+    if name == '' or age == 0 or question == '':
         return RedirectResponse(url="/", status_code=303)
     
     if age < 1 or age > 120:
@@ -178,7 +186,7 @@ async def predict(
 
 
 @app.post("/result", response_class=HTMLResponse)
-@limiter.limit("5/hour")
+@limiter.limit("10/hour")
 async def result(
     request: Request,
     background_tasks: BackgroundTasks,

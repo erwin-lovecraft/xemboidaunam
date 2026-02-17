@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="preload" href="/static/assets/animations.svg" as="image">
+    <link rel="preload" href="/static/assets/banner.svg" as="image">
 </head>
 
 <body>
@@ -35,6 +37,22 @@
             <button type="submit" class="submit-btn">Xem Bói Ngay</button>
         </form>
     </div>
+
+    <script>
+        // Preload heavy assets for subsequent pages
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                var images = [
+                    '/static/assets/animations.svg',
+                    '/static/assets/banner.svg'
+                ];
+                images.forEach(function (src) {
+                    var img = new Image();
+                    img.src = src;
+                });
+            }, 1000); // Delay slightly to prioritize initial render
+        });
+    </script>
 </body>
 
 </html>
